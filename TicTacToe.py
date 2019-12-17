@@ -1,7 +1,5 @@
 from colorama import Fore, Style
 import os
-import sys
-import time
 
 def display_board(board):
 	'''
@@ -114,7 +112,10 @@ def input_loop(board):
 				print("That is not a valid position. Please try again.")
 				continue
 			except KeyboardInterrupt:
+				print(Style.NORMAL)
+				print(Fore.BLUE)
 				print("\nThank you for playing!")
+				print(Style.RESET_ALL)
 				quit()
 			else:
 				break
@@ -144,4 +145,5 @@ def game():
 	display_board(board) #To display the board initially to show all positions to the user.
 	input_loop(board) #Takes input until either the board is full or a player has won the game.
 
-game()
+if __name__ == '__main__':
+	game()
