@@ -52,7 +52,7 @@ def draw_check(board):
     '''
     Returns true if match is a draw. (If board is full and nobody has won, return True.)
     '''
-    if full_check(board) and not win_check(board,'O') and not win_check(board,'O'):
+    if full_check(board) and not win_check(board,'O') and not win_check(board,'X'):
         return True
     return False
 
